@@ -17,7 +17,7 @@ In CMakeLists.txt it can be done by `add_compile_options(-H)` CMake command.
 ## Usage
 After building your project and having the build log file, you can run the script like this
 
-```shell
+```
 > gcc-phases.py log.txt
 ```
 (You may need to prefix that command with `python3` or `py -3` depending on how 
@@ -25,7 +25,7 @@ Python is set up on your system).
 
 Below is an example of possible output (with some lines dropped down):
 
-```shell
+```
 0 : src/source0.cpp.o
    phase opt and generate                   :   92.2 s. ( 90 %)
    deferred                                 :    4.6 s. (  5 %)
@@ -57,12 +57,12 @@ You can also pass two log files to the script and it will output information
 form both for comparison. It may be useful to analyse the impact of
 changes done to the build process, like switch to using precompiled headers.
 
-```shell
+```
 > gcc-phases.py log.txt log2.txt
 ```
 Below is an example of possible output (with some lines dropped down):
 
-```shell
+```
 0 : src/source0.cpp.o
    phase parsing                            :    0.7 s. (  4 %)  --->    11.0 s. ( 39 %)
    preprocessing                            :    0.1 s. (  1 %)  --->     5.6 s. ( 20 %)
@@ -105,7 +105,7 @@ E.g., the default unit line format for CMake is `'\[[\d ]+%\] Building [^ ]+ obj
 
 ## Command line help
 The script supports several other command line parameters, which may be useful.
-```shell
+```
 > python3 --help
 usage: gcc-phases.py [-h] [--include INCLUDE] [--exclude EXCLUDE]
                      [--include-phase INCLUDE_PHASE]
