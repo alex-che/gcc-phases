@@ -10,8 +10,8 @@ The script may be useful to analyse what takes most time during compilation.
 
 
 ## Preparation
-To produce the needed log you first need to add the `-ftime-report` flag to GCC.
-In CMakeLists.txt it can be done by `add_compile_options(-H)` CMake command.  
+To produce the needed log you first need to add the `-H` and `-ftime-report` flags to GCC.
+In CMakeLists.txt it can be done by `add_compile_options(-H -ftime-report)` CMake command.  
 
 
 ## Usage
